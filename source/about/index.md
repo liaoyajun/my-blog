@@ -1,7 +1,6 @@
 ---
-title: about
+title: 关于我
 date: 2018-07-16 15:42:49
-share: false
 ---
 # 爱好
 - 无
