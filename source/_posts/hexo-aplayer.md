@@ -8,25 +8,25 @@ tags:
 ---
 ## 插入音频的方法
 
-### 1、安装插件
+### 安装插件
 
 ``` bash
 npm install hexo-tag-aplayer  --save
 ```
 
-### 2、手动创建node_modules中缺失的文件
+### 手动创建缺失的文件
 
 - 在node_modules\aplayer\dist目录下手动创建`font`文件夹
 - 在node_modules\aplayer\dist目录下手动创建`APlayer.min.css`文件
 
-### 3、测试aplayer
+### 测试aplayer
 
 ``` plain
 {% aplayer "歌名" "歌手" "http://win.web.ra01.sycdn.kuwo.cn/1604c198d8615bb5e52cfbb8f9ed4dfb/5b4c9ad7/resource/n3/320/68/81/877593876.mp3" "autoplay" %}
 ```
 {% aplayer "歌名" "歌手" "http://win.web.ra01.sycdn.kuwo.cn/1604c198d8615bb5e52cfbb8f9ed4dfb/5b4c9ad7/resource/n3/320/68/81/877593876.mp3" "autoplay" %}
 
-### 4、Markdown 插入
+### Markdown 插入
 
 Markdown 是兼容 html 语法的，所以我们可以直接在 Markdown 文档中使用 html 语法。
 
