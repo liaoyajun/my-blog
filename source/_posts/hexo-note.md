@@ -1,7 +1,6 @@
 ---
 title: hexo笔记
 date: 2018-07-16 18:22:00
-share: true
 tags:
   - hexo
   - 笔记
