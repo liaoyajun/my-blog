@@ -1,5 +1,5 @@
 ---
-title: hexo中插入音频
+title: hexo 中插入音频
 date: 2018-07-16 21:38:16
 tags:
   - hexo
@@ -16,18 +16,18 @@ npm install hexo-tag-aplayer  --save
 
 ### 手动创建缺失的文件
 
-- 在node_modules\aplayer\dist目录下手动创建`font`文件夹
-- 在node_modules\aplayer\dist目录下手动创建`APlayer.min.css`文件
+- 在 node_modules\aplayer\dist 目录下手动创建 `font` 文件夹
+- 在 node_modules\aplayer\dist 目录下手动创建 `APlayer.min.css` 文件
 
 ### 测试aplayer
 
-[aplayer参数文档](https://github.com/liaoyajun/hexo-tag-aplayer)
+[aplayer 参数文档](https://github.com/liaoyajun/hexo-tag-aplayer)
 ``` plain
 {% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %}
 ```
 {% aplayer "爱要怎么说出口" "赵传" "./赵传 - 爱要怎么说出口.mp3" "赵传 - 爱要怎么说出口.jpeg" "autoplay" "width:100%" "lrc:爱要怎么说出口-赵传.lrc" %}
 
-### Markdown 插入
+### 直接在 Markdown 插入
 
 Markdown 是兼容 html 语法的，所以我们可以直接在 Markdown 文档中使用 html 语法。
 
