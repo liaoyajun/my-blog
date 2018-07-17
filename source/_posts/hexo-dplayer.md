@@ -36,13 +36,13 @@ vedio 标签
 ```
 <video src="./红玫瑰.mp4" id="video" controls="controls" preload="auto" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline></video>
 
-iframe 标签
+iframe 标签 (移动端存在兼容问题)
 ``` html
 <iframe src="//player.bilibili.com/player.html?aid=24185473&cid=40540394&page=1" width=680 height=556 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 ```
 <iframe src="//player.bilibili.com/player.html?aid=24185473&cid=40540394&page=1" width=680 height=556 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-embed 标签
+embed 标签 (移动端存在兼容问题)
 ``` html
 <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=j0689lrdcjs&auto=0" allowFullScreen="true" quality="high" width="670" height="377" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 ```
