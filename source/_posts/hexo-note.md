@@ -14,6 +14,7 @@ tags:
 ``` bash
 npm install hexo-cli -g
 ```
+<!--more-->
 
 ### 初始化博客
 
@@ -43,7 +44,7 @@ npm install hexo-deployer-git --save
 ```
 
 3、修改项目根目录 `_config.yml` 文件 [deploy](https://hexo.io/docs/deployment.html) 参数
-``` bash
+``` plain
 deploy:
   type: git
   repo: <repository url>
@@ -81,7 +82,7 @@ npm install hexo-generator-search --save
 ```
 
 2、修改项目根目录 `_config.yml` 文件 [search](https://github.com/wzpan/hexo-generator-search) 参数
-``` bash
+``` plain
 search:
   path: search.xml
   field: post
@@ -95,14 +96,98 @@ npm install hexo-asset-image --save
 ```
 
 2、修改项目根目录 `_config.yml` 文件 post_asset_folder 参数
-``` bash
+``` plain
 post_asset_folder: true
 ```
 
 3、再运行 `hexo n "xxxx"` 来生成md博文时， /source/\_posts 文件夹内除了 xxxx.md 文件还有一个同名的文件夹
 
 4、在 xxxx.md 中想引入图片时，先把图片复制到 xxxx 这个文件夹中，然后只需要在 xxxx.md 中按照 markdown 的格式引入图片
-``` bash
+``` markdown
 ![替代文字](xxxx/图片名.jpg)
 ```
+
+### 添加[来必力](https://livere.com/)评论
+
+1、打开 `theme/yelee/_config.yml` ，添加配置信息
+``` plain
+livere:
+  on: true
+  livere_uid: Your uid
+```
+
+2、创建评论 `ejs` 文件
+在 `themes/yelee/layout/_partial/comments` 文件夹创建 `livere.ejs` 文件，拷贝来必力生成的代码。
+``` html
+<section class="livere" id="comments">
+  <!-- 来必力City版安装代码 -->
+  <div id="lv-container" data-id="city" data-uid="Your uid">
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+</section>
+```
+
+3、配置文章内的评论部分内容
+修改 `themes/yelee/layout/_partial/article.ejs` 文件。
+``` html
+<% } else if (theme.livere.on) { %>
+    <%- partial('comments/livere') %>
+<% } else if (theme.youyan.on) { %>
+```
+
+### 添加字数统计和阅读时长
+
+1、安装插件
+``` bash
+npm install hexo-wordcount --save
+```
+
+2、调整代码
+在 `yelee/layout/_partial/post/word.ejs` 下创建 `word.ejs` 文件
+``` html
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count"><%= wordcount(post.content) %>字</span>
+    </span>
+  </span>
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count"><%= min2read(post.content) %>分</span>
+    </span>
+  </span>
+</div>
+```
+然后在 `themes/yelee/layout/_partial/article.ejs` 中添加字数统计代码
+``` html
+<header class="article-header">
+  <%- partial('post/title', {class_name: 'article-title'}) %>
+  <% if(theme.word_count && !post.no_word_count){ %>
+    <%- partial('post/word') %>
+  <% } %>
+</header>
+```
+
+3、打开 `theme/yelee/_config.yml` ，修改 `word_count` ，如果单篇文章不需要字数统计，可设置 `no_word_count` 为 `false`
+
+
+
+
+
 

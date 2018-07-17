@@ -13,6 +13,7 @@ tags:
 ``` bash
 npm install hexo-tag-aplayer  --save
 ```
+<!--more-->
 
 ### 手动创建缺失的文件
 
