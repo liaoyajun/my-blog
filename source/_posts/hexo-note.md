@@ -186,6 +186,41 @@ npm install hexo-wordcount --save
 
 3、打开 `theme/yelee/_config.yml` ，修改 `word_count` ，如果单篇文章不需要字数统计，可设置 `no_word_count` 为 `false`
 
+### 鼠标点击效果和粒子效果
+
+1、拷贝 `love.js` 和 `particle.js` 到 `themes/yelee/source/resources/` 目录
+
+2、打开 `themes/yelee/layout/_partial/after-footer.ejs` 文件，引入js
+``` html
+<script async type="text/javascript" src="/resources/love.js"></script>
+// 移动端效果差，不引入粒子效果
+<script type="text/javascript">
+  var flag = (window.navigator.userAgent.toLocaleLowerCase().indexOf('mobile') == -1);
+  if (flag) {
+    // 不确定其他地方使用 window.onload ，直接延时好了
+    setTimeout(function() {
+      var theBody = document.getElementsByTagName('body').item(0);
+      var myScript = document.createElement('script');
+      myScript.src = '/resources/particle.js';
+      myScript.type = 'text/javascript';
+      myScript.defer = true;
+      theBody.appendChild(myScript);
+    }, 3000)
+  }
+</script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
