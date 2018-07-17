@@ -21,10 +21,11 @@ npm install hexo-tag-aplayer  --save
 
 ### 测试aplayer
 
+[aplayer参数文档](https://github.com/liaoyajun/hexo-tag-aplayer)
 ``` plain
-{% aplayer "歌名" "歌手" "http://win.web.ra01.sycdn.kuwo.cn/1604c198d8615bb5e52cfbb8f9ed4dfb/5b4c9ad7/resource/n3/320/68/81/877593876.mp3" "autoplay" %}
+{% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %}
 ```
-{% aplayer "歌名" "歌手" "http://win.web.ra01.sycdn.kuwo.cn/1604c198d8615bb5e52cfbb8f9ed4dfb/5b4c9ad7/resource/n3/320/68/81/877593876.mp3" "autoplay" %}
+{% aplayer "爱要怎么说出口" "赵传" "./赵传 - 爱要怎么说出口.mp3" "赵传 - 爱要怎么说出口.jpeg" "autoplay" "width:100%" "lrc:爱要怎么说出口-赵传.lrc" %}
 
 ### Markdown 插入
 
@@ -32,15 +33,15 @@ Markdown 是兼容 html 语法的，所以我们可以直接在 Markdown 文档�
 
 iframe 标签
 ``` html
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=30251317&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=189164&auto=1&height=66"></iframe>
 ```
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=30251317&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=189164&auto=1&height=66"></iframe>
 
 embed 标签
 ``` html
-<embed src="//music.163.com/style/swf/widget.swf?sid=30251317&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
+<embed src="//music.163.com/style/swf/widget.swf?sid=189164&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
 ```
-<embed src="//music.163.com/style/swf/widget.swf?sid=30251317&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
+<embed src="//music.163.com/style/swf/widget.swf?sid=189164&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
 
 
 
