@@ -215,6 +215,7 @@ npm install hexo-wordcount --save
 1、安装插件
 ``` bash
 npm install hexo-helper-live2d --save
+npm install live2d-widget-model-shizuku --save  # 安装具体模型
 ```
 
 2、添加项目根目录 `_config.yml` 文件 `live2d` 参数
@@ -222,8 +223,13 @@ npm install hexo-helper-live2d --save
 live2d:
   enable: true
   scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
   model:
-    use: live2d-widget-model-wanko
+    use: live2d-widget-model-shizuku
   display:
     position: right
     width: 150
@@ -231,16 +237,3 @@ live2d:
   mobile:
     show: true
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
