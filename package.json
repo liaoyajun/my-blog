@@ -14,6 +14,7 @@
     "hexo-generator-index": "^0.2.0",
     "hexo-generator-search": "^2.2.5",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-helper-live2d": "^3.1.0",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.1",
@@ -21,6 +22,7 @@
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-tag-cloud": "^2.0.11",
     "hexo-tag-dplayer": "^0.3.3",
-    "hexo-wordcount": "^3.0.2"
+    "hexo-wordcount": "^3.0.2",
+    "live2d-widget-model-shizuku": "^1.0.5"
   }
 }

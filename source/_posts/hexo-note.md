@@ -210,9 +210,27 @@ npm install hexo-wordcount --save
 </script>
 ```
 
+### 添加一个萌妹子
 
+1、安装插件
+``` bash
+npm install hexo-helper-live2d --save
+```
 
-
+2、添加项目根目录 `_config.yml` 文件 `live2d` 参数
+``` plain
+live2d:
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+```
 
 
 
