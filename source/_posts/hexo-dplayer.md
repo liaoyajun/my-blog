@@ -30,7 +30,7 @@ npm install hexo-tag-dplayer  --save
 
 Markdown 是兼容 html 语法的，所以我们可以直接在 Markdown 文档中使用 html 语法。
 
-vedio 标签
+vedio 标签 (本地文件使用相对路径时，在非对应页面时，会找不到文件)
 ``` html
 <video src="./红玫瑰.mp4" id="video" controls="controls" preload="auto" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline></video>
 ```
