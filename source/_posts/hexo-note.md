@@ -212,7 +212,7 @@ npm install hexo-wordcount --save
 
 ### 添加一个萌妹子
 
-1、安装插件
+1、安装插件 [live2d](https://huaji8.top/post/live2d-plugin-2.0/)
 ``` bash
 npm install hexo-helper-live2d --save
 npm install live2d-widget-model-shizuku --save  # 安装具体模型
@@ -237,3 +237,6 @@ live2d:
   mobile:
     show: true
 ```
+
+3、效果图
+![live2d 效果图](hexo-note/screenshot.jpeg)
