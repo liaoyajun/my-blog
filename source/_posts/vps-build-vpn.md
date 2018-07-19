@@ -14,6 +14,7 @@ tags:
 2. 打开 [KiwiVM](https://kiwivm.64clouds.com/main.php)
 
 3. `Main controls` 中停止运行系统
+<!--more-->
 
 4. `Install new OS` ，选择 `centos-6-x86` 系统，记下 `ssh` 的 `password` 和 `port`
 
@@ -77,11 +78,3 @@ sudo ./client_darwin_386 -l local_ip:local_port -r remote_ip:remote_port -mode �
   - 地址 ip : 客户端运行的 `kcptun` 的 `local_ip`
   - 地址 port : 客户端运行的 `kcptun` 的 `local_port`
   - 密码: 远程 `shadowsocks` 的密码
-
-
-
-
-
-
-
-
