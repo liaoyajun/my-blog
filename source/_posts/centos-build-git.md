@@ -72,4 +72,14 @@ git clone ssh://username@yourServer:Port/srv/gitrepo/project.git
 git clone git@yourServer:/srv/gitrepo/project.git
 ```
 
+- 9、创建远程非裸库
 
+``` bash
+# 初始化远程仓库时需要
+git init project.git
+chown -R git:git project.git
+cd project.git/
+git config receive.denyCurrentBranch ignore
+# 每次本地提交完需要执行
+git reset --hard
+```
