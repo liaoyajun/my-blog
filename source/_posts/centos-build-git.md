@@ -17,6 +17,7 @@ yum install git
 groupadd git
 adduser git -g git
 ```
+<!--more-->
 
 - 3、禁止 `git` 用户登录
 
