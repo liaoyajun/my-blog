@@ -36,3 +36,9 @@ iptables -nL --line-number
 ``` bash
 systemctl restart sshd.service
 ```
+
+### 设置免密登录
+
+``` bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@ip -p ssh_port
+```
